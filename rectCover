@@ -1,0 +1,13 @@
+/*
+题目要求：我们可以用2*1的小矩形横着或者竖着去覆盖更大的矩形。请问用n个2*1的小矩形无重叠地覆盖一个2*n的大矩形，总共有多少种方法？
+解题思路：使用递归，因为大矩形和小矩形的大小关系局限了，可以得知，如果要覆盖2*n的矩形，就是由覆盖2*(n-1)的矩形再加上横着和竖着的一个新小矩形即可
+*/
+class Solution {
+public:
+    int rectCover(int number) {
+        if(number == 0) return 0;
+        if(number == 1) return 1;
+        if(number == 2) return 2;
+        else return rectCover(number-1)+rectCover(number-2);
+    }
+};
