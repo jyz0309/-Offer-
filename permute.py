@@ -1,6 +1,6 @@
 class Solution:
     '''
-    解题思路：回溯算法
+    解题思路：回溯算法,递归中对于列表的拼接需要注意作用域相关的问题
     '''
     def permute(self, nums: List[int]) -> List[List[int]]:
         result = []
