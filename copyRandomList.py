@@ -25,6 +25,7 @@ class Solution:
         newhead = head.next
         cur = head
         while cur.next:
+            # 分离的代码特别精简，一开始没想到，在后面看评论区才突然想到。
             temp = cur.next
             cur.next = cur.next.next
             cur = temp
